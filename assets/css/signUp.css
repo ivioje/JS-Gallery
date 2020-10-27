@@ -102,6 +102,7 @@ body {
 .terms-of-service a {
   text-decoration: underline;
   color: #212121;
+  font-weight: 200;
 }
 .terms {
   margin-top: 20px;
