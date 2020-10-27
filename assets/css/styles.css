@@ -3,36 +3,37 @@ html {
 }
 
 body {
-    font-family: 'Lora', serif;
+  font-family: 'Lora', serif;
 }
 header.masthead {
-    background-image: url(/assets/img/david-jorre-oQbLeq4nOek-unsplash.jpg);
- opacity: .9;
- background-color: rgb(70, 68, 68);
+  background-image: url(/assets/img/david-jorre-oQbLeq4nOek-unsplash.jpg);
+  opacity: 0.9;
+  background-color: rgb(70, 68, 68);
 }
-.masthead-heading, .masthead-subheading, .masthead-subhead {
-    color: rgb(209, 205, 205);
+.masthead-heading,
+.masthead-subheading,
+.masthead-subhead {
+  color: rgb(209, 205, 205);
 }
 .bg-circle {
-    opacity: .2;
+  opacity: 0.2;
 }
 .masthead-heading {
-    font-size: 25px;
+  font-size: 25px;
 }
 .nav li a {
-    color: rgb(212, 50, 164);
+  color: rgb(212, 50, 164);
 }
 
 .subfooter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .subfooter a {
-    padding: 10px;
+  padding: 10px;
 }
 
-   
 /* 
 .top-link {
   font-size: 1.25rem;
@@ -51,20 +52,19 @@ header.masthead {
 } */
 
 .bottom {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7vh;
 }
 .arrow {
-    margin-top: 5vh;
+  margin-top: 5vh;
 }
 .arrow a {
-    background: rgb(209, 205, 205);
-    padding: 10px;
-    border-radius: 50px;
+  background: rgb(209, 205, 205);
+  padding: 10px;
+  border-radius: 50px;
 }
-
