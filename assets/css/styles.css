@@ -1,70 +1,309 @@
 html {
   scroll-behavior: smooth;
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Lora', serif;
-}
-header.masthead {
-  background-image: url(/TabsGallery/assets/img/david-jorre-oQbLeq4nOek-unsplash.jpg);
-  opacity: 0.9;
-  background-color: rgb(70, 68, 68);
-}
-.masthead-heading,
-.masthead-subheading,
-.masthead-subhead {
-  color: rgb(209, 205, 205);
-}
-.bg-circle {
-  opacity: 0.2;
-}
-.masthead-heading {
-  font-size: 25px;
-}
-.nav li a {
-  color: rgb(212, 50, 164);
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.subfooter {
+:root {
+  --nav-bg: #060711;
+  --nav-color: wheat;
+}
+
+.navigation {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  background-color: var(--nav-bg);
+  color: var(--nav-color);
+  width: 100%;
+  height: 13vh;
+  z-index: 9999;
 }
-.subfooter a {
-  padding: 10px;
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* 
-.top-link {
-  font-size: 1.25rem;
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  background: rgb(5, 5, 5);
-  width: 2rem;
-  height: 2rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50px;
-  color: rgb(175, 22, 111);
-  display: none;
-  z-index: -100; 
-} */
+.tabs a {
+  text-decoration: none;
+  padding: 15px;
+  color: var(--nav-color);
+  border-radius: 20px;
+  margin: 15px;
+}
 
-.bottom {
-  margin-bottom: 1rem;
+.tabs a:hover {
+  color: var(--nav-bg);
+  background: var(--nav-color);
+  border-radius: 20px;
+  transition: 0.3s ease-in;
 }
 .heading {
+  padding: 10px;
+  font-size: 2rem;
+  font-family: 'Fredericka the Great', serif;
+}
+
+.showlinks {
+  visibility: visible;
+}
+
+.burger {
+  display: block;
+  width: 35px;
+  height: 10;
+  display: none; /*this*/
+  margin: 10px;
+  cursor: pointer;
+}
+.line1,
+.line2,
+.line3 {
+  padding: 1px;
+  margin: 5px;
+  background: wheat;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+  /* .tabs {
+    visibility: hidden;
+  } */
+  .burger {
+    display: block;
+  }
+  /*nav for smaller screens*/
+  .tabs {
+    position: absolute;
+    right: 0px;
+    height: 87vh;
+    top: 13vh;
+    z-index: 2;
+
+    background: #060711;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 50%;
+    transform: translate(100%);
+    transition: transform 0.5s ease-in;
+    z-index: 5;
+  }
+  .tabs a {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+  }
+}
+
+.show-nav {
+  transform: translate(0%);
+}
+
+@keyframes fadeLinks {
+  from {
+    opacity: 0;
+    transform: translate(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+header {
+  background-image: url(/assets/img/david-jorre-oQbLeq4nOek-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  background-color: rgb(70, 68, 68);
+  height: 87vh;
+  color: rgb(221, 220, 220);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  text-align: center;
+}
+
+.get-started {
+  padding: 20px;
+  background: var(--nav-bg);
+  color: var(--nav-color);
+  width: 30%;
+  height: 70px;
+  font-size: 20px;
+  border-radius: 30px;
+  border: 1px solid var(--nav-bg);
+}
+
+.get-started:hover,
+.start:hover {
+  color: var(--nav-bg);
+  background: var(--nav-color);
+  transition: 0.2s ease-in;
+}
+
+.start {
+  padding: 10px;
+  background: var(--nav-bg);
+  color: var(--nav-color);
+  font-size: 20px;
+  border-radius: 30px;
+  border: 1px solid var(--nav-bg);
+  height: 50px;
+}
+
+.container {
+  margin-top: 10vh;
+}
+
+.bigTxt {
+  font-size: 30px;
+}
+.subTxt {
+  font-size: 25px;
+}
+
+.scroll-down {
+  cursor: pointer;
+}
+
+.arrow {
+  margin-top: 100px;
+}
+
+.catalogue {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 7vh;
 }
-.arrow {
+.images {
+  border-radius: 100%;
+  width: 25%;
+  border-style: solid;
+
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px 3px rgb(238, 238, 238);
+}
+.select {
+  width: 40%;
+  margin-right: 5%;
+}
+
+.book1 {
+  margin-left: 7%;
+}
+.select .titles {
+  font-size: 35px;
+  font-weight: bolder;
+  color: rgb(49, 49, 49);
+}
+
+.text {
+  font-size: 20px;
+  font-weight: 100;
+  color: rgb(126, 126, 126);
+}
+
+.subheading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#section1 {
+  margin-top: 10vh;
+}
+.books {
+  margin-top: 20vh;
+}
+
+.btn {
+  background-color: var(--nav-bg);
+  color: var(--nav-color);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--nav-color);
+  color: var(--nav-bg);
+  transition: 0.2s ease-in;
+}
+/* about section*/
+.about {
+  background-image: url(/assets/img/rui-silva-sj-scUdSwpa95Q-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  margin-top: 10vh;
+  height: 60vh;
+}
+.abouttabs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.abouttxt {
+  width: 80%;
+  line-height: 1em;
+}
+
+footer {
+  background-color: var(--nav-bg);
+  height: 40vh;
+}
+
+footer .footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+footer .footer-nav .social,
+.bottom-links {
+  padding: 25px;
+}
+
+footer .footer-nav .social a,
+.bottom-links a {
+  padding: 20px;
+  text-decoration: none;
+  color: var(--nav-color);
+}
+
+footer .footer-nav .date {
+  color: gray;
   margin-top: 5vh;
-}
-.arrow a {
-  background: rgb(209, 205, 205);
-  padding: 10px;
-  border-radius: 50px;
 }
