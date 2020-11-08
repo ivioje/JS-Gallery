@@ -1,5 +1,5 @@
 //format date
-const date = document.querySelector('cdate');
+const date = document.querySelector('.cdate');
 date.innerHTML = new Date().getFullYear();
 
 //nav
@@ -15,8 +15,18 @@ const navSlide = () => {
   });
 
   links.forEach((link, index) => {
-    link.style.animation = `fadeLinks 0.5s ease forwards ${index / 7 + 1.5}s`;
+    link.style.animation = `fadeLinks 0.5s ease forwards ${index / 7 + 1.8}s`;
   });
 };
 
 navSlide();
+
+let div = document.querySelector('.bigTxt');
+let h1  =document.createElement('h1');
+h1.textContent="Programming Books Gallery";
+div.appendChild(h1);
+
+
+
+
+

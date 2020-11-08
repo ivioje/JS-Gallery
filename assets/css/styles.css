@@ -3,6 +3,8 @@ html {
   margin: 0px;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
 }
 
 body {
@@ -16,7 +18,10 @@ body {
   --nav-bg: #060711;
   --nav-color: wheat;
 }
-
+/*====================================================================================
+*nav styles
+*=====================================================================================
+*/
 .navigation {
   display: flex;
   align-items: center;
@@ -57,6 +62,7 @@ body {
   visibility: visible;
 }
 
+/*burger */
 .burger {
   display: block;
   width: 35px;
@@ -74,6 +80,10 @@ body {
   transition: all 0.5s ease;
 }
 
+/*=========================================================
+*media queries
+*==========================================================
+*/
 @media screen and (max-width: 900px) {
   body {
     overflow-x: hidden;
@@ -81,9 +91,7 @@ body {
   .heading {
     font-size: 2rem;
   }
-  /* .tabs {
-    visibility: hidden;
-  } */
+
   .burger {
     display: block;
   }
@@ -112,11 +120,88 @@ body {
     align-items: center;
     opacity: 0;
   }
+
+  .catalogue {
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+  }
+
+  .catalogue .select {
+    order: 2;
+    width: 80%;
+  }
+  .catalogue .images {
+    order: 1;
+    width: 50%;
+  }
+}
+/* .botton-heading{
+    visibility: visible;
+  }
+
+  .bottom-links{
+   display: flex;
+   align-items:flex-start;
+   justify-content: space-between;
+   flex-direction: row;
+  } */
+
+@media screen and (max-width: 800px) {
+  .container .bigTxt {
+    font-size: 25px;
+  }
+  .container .subTxt {
+    font-size: 22px;
+  }
 }
 
+@media screen and (max-width: 400px) {
+  .catalogue .select {
+    order: 2;
+    width: 80%;
+  }
+  .catalogue .images {
+    order: 1;
+    width: 70%;
+  }
+  .container .bigTxt {
+    font-size: 20px;
+  }
+  .container .subTxt {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer .footer-nav .social,
+  .bottom-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .footer-nav {
+    display: flex;
+  }
+  .label {
+ opacity: 1;
+}
+}
+
+/*===========================================
+*toggle class (used in javaScript)
+*============================================
+*/
 .show-nav {
   transform: translate(0%);
 }
+
+/*==========================================================================
+*keyframes animation
+*===========================================================================
+*/
 
 @keyframes fadeLinks {
   from {
@@ -187,15 +272,15 @@ header {
 }
 
 .bigTxt {
-  font-size: 30px;
+  font-size: 3vw;
 }
 .subTxt {
-  font-size: 25px;
+  font-size: 1.8vw;
 }
 
-.scroll-down {
+/* .scroll-down {
   cursor: pointer;
-}
+} */
 
 .arrow {
   margin-top: 100px;
@@ -266,7 +351,7 @@ header {
   background-size: cover;
   color: white;
   margin-top: 10vh;
-  height: 60vh;
+  /* height: 60vh; */
 }
 .abouttabs {
   display: flex;
@@ -281,7 +366,7 @@ header {
 
 footer {
   background-color: var(--nav-bg);
-  height: 40vh;
+  /* height: 40vh; */
 }
 
 footer .footer-nav {
@@ -291,9 +376,15 @@ footer .footer-nav {
   flex-direction: column;
 }
 
+/* footer .footer-nav .social, .bottom-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
 footer .footer-nav .social,
 .bottom-links {
-  padding: 25px;
+  padding: 10px;
 }
 
 footer .footer-nav .social a,
@@ -302,8 +393,25 @@ footer .footer-nav .social a,
   text-decoration: none;
   color: var(--nav-color);
 }
+footer .footer-nav .social a {
+  font-size: 30px;
+}
 
-footer .footer-nav .date {
+footer .date {
   color: gray;
-  margin-top: 5vh;
+  margin-top: 1vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.label {
+  color: var(--nav-color);
+  display: block;
+}
+
+footer .footer-nav .bottom-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
