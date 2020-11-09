@@ -21,12 +21,30 @@ const navSlide = () => {
 
 navSlide();
 
-let div = document.querySelector('.bigTxt');
-let h1  =document.createElement('h1');
-h1.textContent="Programming Books Gallery";
-div.appendChild(h1);
+// let div = document.querySelector('.bigTxt');
+// let h1  =document.createElement('h1');
+// h1.textContent="Programming Books Gallery";
+// div.appendChild(h1);
 
+let container = document.querySelector('.container');
+let div1 = document.createElement('div');
+div1.setAttribute('class', 'bigTxt');
+div1.innerHTML = `<h1>Programming Books Gallery</h1>`;
+container.append(div1);
 
+let div2 = document.createElement('div');
+div2.setAttribute('class', 'subTxt');
+div2.innerHTML = `<h2>Read, Bookmark and Share!</h2>`;
+container.append(div2);
 
+let div3 = document.createElement('div');
+div3.setAttribute('class', 'subTxt');
+div3.innerHTML = `<h2>Over 100 Programming Books</h2>`;
+container.append(div3);
 
-
+let div4 = document.createElement('div');
+div4.innerHTML = `<a href='#'>
+  <button class='get-started'>Get Started</button>
+</a>
+`;
+container.append(div4);
