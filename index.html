@@ -10,6 +10,7 @@
 
     <!--STYLES-->
     <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/nav.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Monoton&display=swap"
       rel="stylesheet"
@@ -27,10 +28,13 @@
 
   <body>
     <nav class="navigation">
-      <h1 class="heading">TabsGallery</h1>
+      <a href="about.html" class="main-title">
+        <h1 class="heading">TabsGallery</h1></a
+      >
       <div class="tabs">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
+        <a href="guide.html">Guide</a>
         <a href="blog.html">Blog</a>
         <a href="login.html">Log In</a>
         <a href="signup.html">Sign Up</a>
@@ -46,11 +50,12 @@
     <header>
       <div class="container"></div>
     </header>
+    <!--end of header-->
 
     <div class="subheading">
       <h1>Features</h1>
     </div>
-    <hr style="width: 10%" />
+    <hr style="width: 5%" />
 
     <section id="section1">
       <div class="content">
@@ -139,15 +144,6 @@
 
     <footer>
       <section class="footer-nav">
-        <div class="social">
-          <div class="botton-heading">
-            <h2 class="label">Connect with us</h2>
-          </div>
-          <a href="#" title="twitter"> <i class="fab fa-twitter"></i></a>
-          <a href="" title="Gmail"><i class="fas fa-paper-plane"></i></a>
-          <a href="" title="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-
         <div class="bottom-links">
           <div class="botton-heading">
             <h2 class="label">Quick Links</h2>
@@ -158,28 +154,25 @@
           <a href="login.html">Log In</a>
           <a href="sign-up.html">Sign Up</a>
         </div>
+
+        <div class="social">
+          <div class="botton-heading">
+            <h2 class="label">Connect with us</h2>
+          </div>
+          <a href="#" title="twitter"> <i class="fab fa-twitter"></i></a>
+          <a href="" title="Gmail"><i class="fas fa-paper-plane"></i></a>
+          <a href="" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
       </section>
-      <div class="date">
-        copyright tabsgallery &copy;<span class="cdate"></span>
-      </div>
     </footer>
+    <div class="date">
+      copyright tabsgallery &copy;<span class="cdate"></span>
+    </div>
 
     <script
       src="https://kit.fontawesome.com/7fd3eb154a.js"
       crossorigin="anonymous"
     ></script>
-    <script src="/assets/bootstrap/js/index.js"></script>
-
-    <!--bootstrap js-->
-    <!-- <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script> -->
+    <script src="/assets/js/index.js"></script>
   </body>
 </html>

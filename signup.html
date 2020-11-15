@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Sign Up</title>
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/signUp.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--navigation-->
+    <nav class="signup-nav">
+      <a href="index.html" class="back"
+        ><i class="fas fa-arrow-left"></i> Back</a
+      >
+      <a href="about.html" class="main-title">TabsGallery</a>
+    </nav>
+
+    <div class="signup-form">
+      <div class="note">
+        Sign Up and enjoy access to over 100 programming books!
+      </div>
+      <div>
+        <form
+          action="index.html"
+          class="main-form"
+          name="signupForm"
+          onsubmit="return validateForm()"
+          method="POST"
+        >
+          <img src="/assets/img/avatar.png" alt="user" class="signup-img" />
+          <input
+            type="text"
+            placeholder="enter your username"
+            title="username"
+            id="name"
+            class="input"
+          />
+          <input
+            type="password"
+            placeholder="enter a password"
+            title="password"
+            id="pwd"
+            name="password"
+            class="input"
+          />
+
+          <input
+            type="password"
+            placeholder="confirm password"
+            title="confirm password"
+            id="confirm-pwd"
+            class="input"
+          />
+          <section class="rememberme">
+            <input
+              type="checkbox"
+              name="remember me"
+              id="remember-me"
+              value="Remember me"
+            />
+            Remember me
+          </section>
+          <input class="signup-btn" type="submit" value="Sign Up" />
+          <div class="option">
+            Already have an account? <a href="login.html">Log In</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--footer-->
+    <div class="copyright">
+      copyright tabsgallery &copy;<span class="cdate"></span>
+    </div>
+
+    <script src="/assets/js/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7fd3eb154a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
