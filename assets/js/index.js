@@ -53,21 +53,7 @@ headerBtn.innerHTML = `<a href='#'>
 `;
 container.append(headerBtn);
 
-/*=======================================
- *Sign Up
- *========================================
- */
-// function validateForm () {
-//   let password = document.forms['signupForm']['password'].value;
 
-//   if (password.length < 8) {
-//     let para = document.createElement('p');
-//     para.setAttribute = ('class', 'alert1');
-//     para.innerHTML = `Password must be a minimum of 8 characters
-// `;
-//     return false;
-//   }
-// }
 
 // When the user scrolls down 50px from the top of the document, resize the header's font size
 window.onscroll = function () {
@@ -76,15 +62,56 @@ window.onscroll = function () {
 
 function scrollFunction () {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-  
-    document.querySelector('.navigation').style.height = '9vh';
-    document.querySelector('.navigation').style.backgroundColor = '#060711';
-    document.querySelector('.navigation').style.boxShadow = '4px solid gray';
-
+    document.querySelector('.navigation').classList.add('changeNav');
   } else {
-    document.querySelector('.navigation').style.height = '13vh';
-    document.querySelector('.navigation').style.backgroundColor = 'transparent';
+    document.querySelector('.navigation').classList.add('returnNav');
+  }
+}
 
-   
+/*=======================================
+ *validation - Sign Up
+ *========================================
+ */
+function validate () {
+  let errorMsg = document.querySelector('.message');
+  let passwordString = 'password';
+
+  if (document.form.username.value == '') {
+    errorMsg.innerHTML = 'Name cannot be empty';
+    
+    document.form.username.focus();
+    document.getElementById('name').classList.add(
+      'animate__animated',
+      'animate__shakeX'
+    );
+
+    return false;
+  }
+
+  if (document.form.password.value == '') {
+    let errorMsg2 = document.querySelector('.message2');
+    errorMsg2.innerHTML = 'Password is required';
+    document.form.password.focus();
+    return false;
+  } else if (document.form.password.value.length <= 5) {
+    let errorMsg2 = document.querySelector('.message2');
+    errorMsg2.innerHTML = 'Password must be six or more characters long';
+    document.form.password.focus();
+    return false;
+  } else if (
+    document.form.password.value == passwordString ||
+    document.form.password.value == passwordString.toUpperCase
+  ) {
+    let errorMsg2 = document.querySelector('.message2');
+    errorMsg2.innerHTML = 'Your password cannot be password';
+    document.form.password.focus();
+    return false;
+  }
+
+  if (document.form.confirm.value !== document.form.password.value) {
+    let errorMsg3 = document.querySelector('.message3');
+    errorMsg3.innerHTML = 'passwords do not match';
+    document.form.confirm.focus();
+    return false;
   }
 }

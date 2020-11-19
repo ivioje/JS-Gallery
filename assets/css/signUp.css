@@ -120,6 +120,9 @@ body {
   .rememberme {
     width: 100%;
   }
+  .message, .message2, .message3{
+    text-align: center;
+  }
 }
 
 .option {
@@ -140,13 +143,13 @@ body {
 */
 .copyright {
   color: gray;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  /* position: fixed; */
+  /* left: 0;
+  bottom: 0; */
   text-align: center;
   width: 100%;
   font-size: 0.8em;
-  margin-top: 7vh;
+  /* margin-top: 7vh; */
 }
 
 .back {
@@ -159,11 +162,15 @@ body {
   text-decoration: none;
 }
 
-/*Alerts*/
-.alert1 {
+/*error message*/
+.message, .message2, .message3 {
   color: red;
-  margin: 0;
+  font-size: 12px;
+  float: left;
+  width: 170%;
 }
-/* .show-alert1 {
-  display: block;
-} */
+
+.animation {
+  animation: shakeX;
+  animation-duration: .5s;
+}

@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>Sign Up</title>
+    <title>TabsGallery | Sign Up</title>
 
     <!--STYLES-->
     <link rel="stylesheet" href="/assets/css/signUp.css" />
@@ -39,47 +39,48 @@
         Sign Up and enjoy access to over 100 programming books!
       </div>
       <div>
-        <form
-          action="index.html"
-          class="main-form"
-          name="signupForm"
-          onsubmit="return validateForm()"
-          method="POST"
-        >
+        <form action="" class="main-form" id="form" name="form" onsubmit="return (validate());">
           <img src="/assets/img/avatar.png" alt="user" class="signup-img" />
+
+       
+          
           <input
             type="text"
             placeholder="enter your username"
-            title="username"
+            name="username"
             id="name"
             class="input"
           />
+          <div class="message"></div>
           <input
             type="password"
             placeholder="enter a password"
-            title="password"
+            name="password"
             id="pwd"
             name="password"
             class="input"
           />
+           <div class="message2"></div>
 
           <input
             type="password"
             placeholder="confirm password"
-            title="confirm password"
+            name="confirm"
             id="confirm-pwd"
             class="input"
           />
+          <div class="message3"></div>
           <section class="rememberme">
             <input
               type="checkbox"
-              name="remember me"
+              name="remember-me"
               id="remember-me"
               value="Remember me"
             />
             Remember me
           </section>
-          <input class="signup-btn" type="submit" value="Sign Up" />
+          <!-- <input class="signup-btn" type="submit" id="submit" /> -->
+          <button type="submit" class="signup-btn">Sign Up</button>
           <div class="option">
             Already have an account? <a href="login.html">Log In</a>
           </div>
